@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UnBot Academy</title>
+  <!-- Add your CSS links and other head elements here -->
+  <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+<body>
+  <header>
+    <!-- Navigation bar -->
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <!-- Add more navigation links as needed -->
+      </ul>
+      <div class="user-menu">
+        <% if (user) { %>
+          <span>Welcome, <%= user.username %>!</span>
+          <a href="/logout">Logout</a>
+        <% } else { %>
+          <a href="/login">Login</a>
+          <a href="/register">Register</a>
+        <% } %>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <%- body %>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 UnBot Academy</p>
+  </footer>
+
+  <!-- Add your JavaScript files here -->
+  <script src="/public/js/main.js"></script>
+</body>
+</html>
